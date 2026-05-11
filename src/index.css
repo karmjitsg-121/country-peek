@@ -1,0 +1,141 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background-color: #f5f7fb;
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* APP WRAPPER */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER (basic fallback styling if not in App.css yet) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #2563eb;
+  color: white;
+}
+
+.header__brand {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header__nav {
+  display: flex;
+  gap: 16px;
+  font-weight: 500;
+}
+
+/* HOME */
+.home {
+  padding: 20px;
+}
+
+/* SEARCH BAR */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar__input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-bar__input:focus {
+  border-color: #2563eb;
+}
+
+/* STATUS MESSAGES */
+.home__status {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+}
+
+.home__status--error {
+  color: #dc2626;
+}
+
+/* GRID */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card__flag {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card__body {
+  padding: 12px;
+}
+
+.card__name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card__body p {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #4b5563;
+}
+
+.card__body p span {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* LOADING / EMPTY */
+.loading,
+.empty {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+}
